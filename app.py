@@ -7,11 +7,11 @@ print(os.environ['APP_SETTINGS'])
 
 @app.route('/')
 def hello():
-    return "Hello World Again and Again!!!!"
+    return "Hello World its me Again and Again!!!!"
 
 @app.route('/<name>')
 def hello_name(name):
-    return "Hello {}!".format(name)
+    return "Hello there {}!".format(name)
 
 
 if __name__ == '__main__':
