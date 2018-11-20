@@ -17,7 +17,7 @@ db = SQLAlchemy(app)
 
 print(os.environ['APP_SETTINGS'])
 
-
+from models import *
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
