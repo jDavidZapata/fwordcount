@@ -9,7 +9,7 @@ db = SQLAlchemy(app)
 
 print(os.environ['APP_SETTINGS'])
 
-from models import Result
+
 
 @app.route('/')
 def hello():
