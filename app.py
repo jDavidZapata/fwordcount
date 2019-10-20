@@ -163,7 +163,7 @@ def get_results(job_key):
         )[:10]
         return jsonify(results)
     else:
-        return "Nay!", 202
+        return "Nay Ha Ha Ha!", 202
 
 
 
