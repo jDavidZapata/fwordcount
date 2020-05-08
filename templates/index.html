@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="WordcountApp">
   <head>
     <title>David's Wordcount</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +10,14 @@
       }
     </style>
   </head>
-  <body>
+  <body ng-controller="WordcountController">
     <div class="container">
       <div class="row">
         <div class="col-sm-5 col-sm-offset-1">
           <h1>FWordCount 3000</h1>
           <h4>Counting words with nltk</h4>
           <br>
-          <form role="form" method="POST" action="/">
+          <form role="form" ng-submit="getResults()">
             <div class="form-group">
               <input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 300px;">
             </div>
@@ -32,7 +32,7 @@
         <div class="col-sm-5 col-sm-offset-1">
           {% if results %}
             <h2>Frequencies</h2>
-            <br>
+            <br><script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
             <div id="results">
               <table class="table table-striped" style="max-width: 300px;">
                 <thead>
@@ -54,7 +54,9 @@
       </div>
     </div>
     <br><br>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
   </body>
 </html>
